@@ -1,0 +1,28 @@
+<div class="row">
+<div id="carousel" class="col-md-6 carousel slide" data-ride="carousel">
+
+<?php
+
+$imgs = scandir("../img/carousel");
+
+echo '<ol class="carousel-indicators">';
+for ($i = 2; $i < count($imgs); $i++)
+    echo '<li data-target="#carousel-example-generic" data-slide-to="0"' . ($i == 2?'class="active"':'') . '></li>';
+echo '</ol>';
+
+echo '<div class="carousel-inner" role="listbox">';
+for ($i = 2; $i < count($imgs); $i++)
+    echo '<div class="item' . ($i == 2?' active':'') . '"><img class="img-responsive center-block imginicio" src="img/carousel/' . $imgs[$i] . '"/></div>';
+echo '</div>';
+
+?>
+
+
+</div>
+
+<div class="col-md-5">
+<p>Escocia es un país cautivador, donde en cada cosa que miras tienes una fotografía que sacar. Sus interminables paisajes verdes te atrapan y te invitan a quedarte, y no nos pudimos hacer una idea de todo eso hasta que llegamos allí.</p>
+<p>Esta web es un resumen, y a la vez una especie de homenaje, al viaje que hicimos a esas hermosas tierras, en verano de 2012. Todo lo que aquí se cuenta son opiniones personales, y las imágenes que aparecen también son nuestras, aunque como he dicho, nada como estar allí para verlo.</p>
+</div>
+    
+<script type="text/javascript">$('#carousel').carousel('cycle');</script>
