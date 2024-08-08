@@ -12,12 +12,7 @@ function cargarMenu(menu)
         else if (menu == 2)
             $('#contenido').load('ajax/datos.html');
         else if (menu == 3)
-        {
-            $('#contenido').load('ajax/viaje.html', {}, function(datos)
-            {
-                $('#dias').accordion({header: 'h3', heightStyle: 'content' });        
-            });
-        }
+            $('#contenido').load('ajax/viaje.html');
     }
 }
 
